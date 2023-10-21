@@ -1,0 +1,76 @@
+.page-header {
+	position: fixed;
+	width: 100%;
+	z-index: 50;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: $bg;
+		z-index: 9;
+	}
+	&__logo,
+	&__burger,
+	&__main-nav,
+	&__user-nav {
+		position: relative;
+		z-index: 10;
+	}
+	// DESKTOP
+	@media (min-width: $burgerBP) {
+		padding: 40px 0;	
+		&__inner {
+			display: flex;
+			align-items: center;
+		}
+		&__logo,
+		&__user-nav {
+			min-width: 150px;
+		}
+		&__main-nav {
+			flex: 1 1 auto;
+		}
+	}
+	// ADAPTIVE
+	@media (max-width: $burgerBP) {
+		padding: 15px 0;
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}	
+		&__user-nav,
+		&__main-nav {
+			position: fixed;
+			width: 100%;
+			top: 78px;
+			left: 0;
+			right: 0;
+			padding: 10px 15px;
+			border-bottom: 3px solid rgba($color: $accentColor, $alpha: 0.3);
+
+		}
+		&__main-nav {
+			top: 120px;
+			transform: translateX(-1000%);
+			transition: all 0.3s ease;
+			&--open {
+				transform: translateX(0%);
+				transition: all 0.3s ease;
+			}
+		}
+		&__user-nav {
+			transform: translateX(-1000%);
+			transition: all 0.3s ease;
+			&--open {
+				transform: translateX(0%);
+				transition: all 0.3s ease;
+			}
+		} 
+	}
+}

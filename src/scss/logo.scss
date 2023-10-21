@@ -1,0 +1,10 @@
+.logo {
+	color: rgba($color: $mainTextColor, $alpha: 0.5);
+	font-family: Raleway;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	&__text {
+		color: $accentColor;
+	}
+}

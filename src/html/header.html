@@ -1,35 +1,48 @@
 <header class="page-header">
 	<div class="container">
-		<h1 class="visually-hidden"></h1>
-		<nav class="page-header__main-nav main-nav">
-			<!--Delete atr href on main-page-->
-			<a class="main-nav__logo logo">
+		<div class="page-header__inner">
+			<a class="page-header__logo logo">
 				<span class="logo__text">ai.</span>man
 			</a>
-			<ul class="main-nav__list">
-				<li class="main-nav__item">
-					<a class="main-nav__link" href="#">PRODUCTS</a>
-				</li>
-				<li class="main-nav__item">
-					<a class="main-nav__link" href="#">SOLUTIONS</a>
-				</li>
-				<li class="main-nav__item">
-					<a class="main-nav__link" href="#">CUSTOMER</a>
-				</li>
-				<li class="main-nav__item">
-					<a class="main-nav__link" href="#">PRICING</a>
-				</li>
-				<li class="main-nav__item">
-					<a class="main-nav__link" href="#">RESOURCES</a>
-				</li>
-			</ul>
-		</nav>
-		<nav class="page-header__user-nav user-nav">
-			<ul class="user-nav__list">
-				<li class="user-nav__item">
-					<a class="user-nav__link" href="#">REGISTER NOW</a>
-				</li>
-			</ul>
-		</nav>
+			<button class="page-header__burger burger" type="button" aria-label="Open menu">
+				<span></span>
+			</button>
+
+			<nav class="page-header__main-nav main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">PRODUCTS</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">SOLUTIONS</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">CUSTOMER</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">PRICING</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">RESOURCES</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="page-header__user-nav user-nav">
+				<ul class="user-nav__list">
+					<li class="user-nav__item">
+						<a class="user-nav__link" href="#">REGISTER NOW</a>
+						<svg class="user-nav__svg" width="23" height="23" viewBox="0 0 23 23" fill="none"
+							xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M5.29455 16.2918L16.1004 5.48595L17.5146 6.90016L6.70876 17.7061L5.29455 16.2918Z"
+								fill="white" />
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M15.292 17.2915V7.70817H5.70866V5.70817H17.292V17.2915H15.292Z" fill="white" />
+						</svg>
+
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 </header>

@@ -446,18 +446,217 @@ select {
   line-height: 1.75;
   font-weight: 600;
   color: #FFFFF0;
-  background-color: #FFBD59;
+  background-color: #A7F306;
   border-radius: 21px;
 }
 .button:hover {
-  color: #FFBD59;
+  color: #A7F306;
 }
 .button:focus {
-  color: #FFBD59;
+  color: #A7F306;
 }
 .button:active {
-  color: #FFBD59;
+  color: #A7F306;
 }
 .button:disabled {
-  color: #FFBD59;
+  color: #A7F306;
+}
+
+.page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+.page-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #1A1A1A;
+  z-index: 9;
+}
+.page-header__logo, .page-header__burger, .page-header__main-nav, .page-header__user-nav {
+  position: relative;
+  z-index: 10;
+}
+@media (min-width: 767.98px) {
+  .page-header {
+    padding: 40px 0;
+  }
+  .page-header__inner {
+    display: flex;
+    align-items: center;
+  }
+  .page-header__logo, .page-header__user-nav {
+    min-width: 150px;
+  }
+  .page-header__main-nav {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-header {
+    padding: 15px 0;
+  }
+  .page-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-header__user-nav, .page-header__main-nav {
+    position: fixed;
+    width: 100%;
+    top: 78px;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    border-bottom: 3px solid rgba(167, 243, 6, 0.3);
+  }
+  .page-header__main-nav {
+    top: 120px;
+    transform: translateX(-1000%);
+    transition: all 0.3s ease;
+  }
+  .page-header__main-nav--open {
+    transform: translateX(0%);
+    transition: all 0.3s ease;
+  }
+  .page-header__user-nav {
+    transform: translateX(-1000%);
+    transition: all 0.3s ease;
+  }
+  .page-header__user-nav--open {
+    transform: translateX(0%);
+    transition: all 0.3s ease;
+  }
+}
+
+.logo {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.logo__text {
+  color: #A7F306;
+}
+
+.burger {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .burger {
+    display: block;
+    position: relative;
+    height: 24px;
+    width: 37px;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  .burger::before, .burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #A7F306;
+    border-radius: 2px;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger span {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #A7F306;
+    border-radius: 2px;
+    transform: scale(1) translateY(-50%);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+  .burger.active-burger::before {
+    transform: rotate(45deg);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    top: 10px;
+  }
+  .burger.active-burger::after {
+    transform: rotate(-45deg);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    bottom: 11px;
+  }
+  .burger.active-burger span {
+    transform: scale(0);
+  }
+}
+
+.main-nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  padding: 4px;
+}
+.main-nav__link:hover {
+  color: #A7F306;
+}
+.main-nav__link:active {
+  color: #1A1A1A;
+  background-color: #A7F306;
+}
+.main-nav__link:focus {
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px #A7F306, inset 0px 0px 3px 1px #A7F306;
+}
+@media (min-width: 767.98px) {
+  .main-nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .main-nav__item {
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+}
+
+.user-nav__item {
+  display: flex;
+  align-items: center;
+}
+.user-nav__link {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+}
+.user-nav__link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.user-nav__link:hover + .user-nav__svg path {
+  fill: #A7F306;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+.user-nav__link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.user-nav__link:focus + .user-nav__svg path {
+  fill: #A7F306;
+  transition: all 0.3s ease;
+}
+.user-nav__link:active {
+  color: #A7F306;
 }

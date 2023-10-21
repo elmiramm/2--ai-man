@@ -1,0 +1,39 @@
+.main-nav {
+	&__link {
+		font-size: 16px;
+		font-weight: 500;
+		color: #8c8c8c;
+		text-transform: uppercase;
+		padding: 4px;
+		
+		&:hover {
+			color: $accentColor;
+		}
+		&:active {
+			color: $bg;
+			background-color: $accentColor;
+			
+		} 
+		&:focus {
+			outline: none;
+			border-radius: 3px;
+			box-shadow: 0px 0px 3px 1px $accentColor, 
+					inset 0px 0px 3px 1px $accentColor;
+		}
+	}
+		@media (min-width: $burgerBP) {
+			&__list {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				flex-wrap: wrap;
+			}
+			&__item {
+					margin-right: 32px;
+					margin-left: 32px;
+				
+			}
+		}
+	
+}
