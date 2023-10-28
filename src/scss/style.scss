@@ -42,17 +42,18 @@ p {
 	margin: 0;
 }
 
-ul, li {
+ul, ol, li, 
+dl, dt, dd {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-img {
-	object-fit: cover;
-	max-width: 100%;
-	display: block;
-}
+// img {
+// 	object-fit: cover;
+// 	max-width: 100%;
+// 	display: block;
+// }
 
 button {
 	font-family: inherit;
@@ -82,7 +83,7 @@ select {
 // ------Фиксация-футера-внизу-страницы-End--------
 
 .container {
-	max-width: $maxWidthContainer;
+	max-width: $maxWidthContainer + px;
 	padding: 0 15px;
 	margin: 0 auto;
 	&--fluid {
@@ -114,6 +115,7 @@ select {
 @import "burger";
 @import "main-nav";
 @import "user-nav";
+@import "hero";
 
 @import "page-footer";
 
