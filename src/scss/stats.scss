@@ -1,0 +1,23 @@
+.stats {
+	display: flex;
+	&__item {
+		padding: 32px 34px;
+		margin-right: 27px;
+		border-radius: 32px;
+		box-shadow: 
+		inset 388px 0px 157px -197px rgba($color: $bg, $alpha: 1),
+		inset -2px 2px 0px 1px rgba($color: #393939, $alpha: 1),
+		inset -1px -4px 0px 0px rgba($color: #393939, $alpha: 1),
+		inset -239px 0px 100px -180px rgba($color: $mainTextColor, $alpha: 0.1),
+
+	}
+	&__item-text {
+		font-size: 48px;
+		line-height: 1.3;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+		color: $mainTextColor;
+
+	}
+}
