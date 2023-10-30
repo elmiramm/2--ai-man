@@ -10,10 +10,11 @@
 		object-fit: contain;
 		left: 0;
 		top: 80px;
+		z-index: 1;
 	}
 	&__title {
 		font-family: "Raleway";
-		font-size: calc(34px + 5.3vw);
+		font-size: calc(34px + 4.3vw);
 		line-height: 1.55;
 		font-weight: 800;
 		letter-spacing: 1px;
@@ -29,12 +30,31 @@
 		&--accent {
 			color: $accentColor;
 		}
+		@media (min-width: $maxWidthContainer) {
+			font-size: 116px;
+		}
 	}
 	&__inner {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 	&__content {
 		max-width: 410px;
+	}
+	&__text {
+		opacity: 0.5;
+		position: relative;
+		z-index: 2;
+
+		margin-bottom: 48px;
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__button {
+		margin-bottom: 36px;
 	}
 }

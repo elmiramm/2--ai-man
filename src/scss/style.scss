@@ -83,7 +83,7 @@ select {
 // ------Фиксация-футера-внизу-страницы-End--------
 
 .container {
-	max-width: $maxWidthContainer + px;
+	max-width: $maxWidthContainer;
 	padding: 0 15px;
 	margin: 0 auto;
 	&--fluid {
@@ -106,10 +106,7 @@ select {
 	overflow: hidden;
 }
 
-
 @import "buttons";
-
-
 @import "page-header";
 @import "logo";
 @import "burger";
@@ -117,6 +114,9 @@ select {
 @import "user-nav";
 @import "hero";
 @import "stats";
+
+
+
 
 @import "page-footer";
 
