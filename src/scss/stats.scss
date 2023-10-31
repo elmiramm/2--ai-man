@@ -36,4 +36,37 @@
 		font-weight: 500;
 		text-transform: uppercase;
 	}
+	@media (max-width: 990px) {
+		&{
+			flex-wrap: wrap;
+		}
+		&__item {
+			
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+			
+		}
+		&__item-text {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: 500px) {
+		&__item {
+			padding: 15px 15px;
+			width: 100%;
+			&:not(:last-child) {
+				margin-right: 0px;
+			}
+			text-align: right;
+			&--returned {
+				box-shadow: 
+					inset 388px 0px 157px -197px rgba($color: $bg, $alpha: 1),
+					inset -2px 2px 0px 1px rgba($color: #393939, $alpha: 1),
+					inset -1px -4px 0px 0px rgba($color: #393939, $alpha: 1),
+					inset -239px 0px 100px -180px rgba($color: $mainTextColor, $alpha: 0.1);
+			}
+		}
+	}
+			
 }
