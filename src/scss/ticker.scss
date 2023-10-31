@@ -1,0 +1,52 @@
+.ticker {
+	&__wrapper {
+		overflow: hidden;
+		background: $accentGradient;
+		padding: 24px 0;
+
+		display: flex;
+	}
+	&__item {
+		white-space: nowrap;
+		flex-shrink: 0;
+		padding: 0 40px;
+		animation: ticker 5s linear infinite;
+	}
+	&__text {
+		font-family: Raleway;
+		font-size: 36px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1.44px;
+		color: $bg;
+		display: flex;
+		align-items: center;
+
+		position: relative;
+		&::before {
+			content: "%";
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 15px;
+			width: 61px;
+			height: 61px;
+			color: $mainTextColor;
+			background-image: url(../img/icons/star.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+
+			margin-right: 24px;
+		}
+	}
+}
+
+@keyframes ticker {
+	0% {
+		transform: translateZ(0); 
+	}
+	to {
+		transform: translate3d(-100%, 0, 0); 
+	}
+}

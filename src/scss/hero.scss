@@ -1,15 +1,17 @@
 .hero {
 	margin-top: 128px;
 	padding-top: 58px;
+	
 	&__container {
 		position: relative;
+		min-height: 850px;
 	}
 	&__bg-image {
 		position: absolute;
 		width: 94%;
 		object-fit: contain;
 		left: 0;
-		top: 80px;
+		bottom: -25px;
 		z-index: 1;
 	}
 	&__title {
