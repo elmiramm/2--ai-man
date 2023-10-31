@@ -62,6 +62,7 @@
 		padding-top: 58px;
 	}
 	@media (max-width: 990px) {
+
 		&__inner {
 			flex-direction: column;
 
@@ -91,6 +92,9 @@
 		}
 	} 
 	@media (max-width: 500px) {
+		&__bg-image {
+				bottom: 0;
+		}
 		&__text {
 			font-size: 18px;
 			margin-bottom: 30px;

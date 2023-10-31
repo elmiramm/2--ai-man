@@ -780,6 +780,9 @@ select {
   }
 }
 @media (max-width: 500px) {
+  .hero__bg-image {
+    bottom: 0;
+  }
   .hero__text {
     font-size: 18px;
     margin-bottom: 30px;
@@ -885,6 +888,20 @@ select {
   background-position: center;
   background-size: contain;
   margin-right: 24px;
+}
+@media (max-width: 990px) {
+  .ticker__wrapper {
+    padding: 10px 0;
+  }
+  .ticker__text {
+    font-size: 20px;
+  }
+  .ticker__text::before {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
 }
 
 @keyframes ticker {
