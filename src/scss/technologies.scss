@@ -20,27 +20,31 @@
 			& .technologies__svg-link path{
 			fill: $accentColor;
 			transition: all 0.3s ease;
-		}
+			}
 		}
 		&:active {
 			color: $accentColor;
 		}
 	}
-
 	
 	@media (max-width: 990px) {
-		margin-bottom: 50px;
-		&__svg-link {
-			width:60px;
-			height: 60px;
+		& {
+			margin-bottom: 50px;
+			&__svg-link {
+				width:60px;
+				height: 60px;
+			}
 		}
+
 	}
+
 	@media (max-width: $burgerBP) {
 		&__svg-link {
 			width:40px;
 			height: 40px;
 		}
 	}
+	
 	@media (min-width: 990px) {
 		margin-bottom: 160px;
 		&__svg-link {
