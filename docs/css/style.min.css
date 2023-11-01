@@ -436,6 +436,9 @@ select {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.title--accent {
+  color: #A7F306;
+}
 @media (max-width: 990px) {
   .title {
     font-size: calc(15px + 4.8435171386vw);
@@ -737,9 +740,6 @@ select {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero__title--accent {
-  color: #A7F306;
-}
 @media (min-width: 1342px) {
   .hero__title {
     font-size: 116px;
@@ -938,26 +938,29 @@ select {
   align-items: center;
   margin-bottom: 67px;
 }
-.technologies:hover {
+.technologies__link:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-.technologies:hover .technologies__svg-link path {
+.technologies__link:hover .technologies__svg-link path {
   fill: #A7F306;
   transition: all 0.3s ease;
   text-decoration: underline;
 }
-.technologies:focus {
+.technologies__link:focus {
   outline: none;
   text-decoration: underline;
 }
-.technologies:focus + .technologies__svg-link path {
+.technologies__link:focus .technologies__svg-link path {
   fill: #A7F306;
   transition: all 0.3s ease;
 }
-.technologies:active {
+.technologies__link:active {
   color: #A7F306;
 }
 @media (max-width: 990px) {
+  .technologies {
+    margin-bottom: 50px;
+  }
   .technologies__svg-link {
     width: 60px;
     height: 60px;
@@ -970,6 +973,9 @@ select {
   }
 }
 @media (min-width: 990px) {
+  .technologies {
+    margin-bottom: 160px;
+  }
   .technologies__svg-link {
     width: 100px;
     height: 100px;

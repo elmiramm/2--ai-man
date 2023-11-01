@@ -6,28 +6,30 @@
 		align-items: center;
 
 		margin-bottom: 67px;
+		&:hover {
+			color: rgba($color: $mainTextColor, $alpha: 0.5);
+			& .technologies__svg-link path {
+				fill: $accentColor;
+				transition: all 0.3s ease;
+				text-decoration: underline;
+			}
+		}
+		&:focus {
+			outline: none;
+			text-decoration: underline;
+			& .technologies__svg-link path{
+			fill: $accentColor;
+			transition: all 0.3s ease;
+		}
+		}
+		&:active {
+			color: $accentColor;
+		}
 	}
 
-	&:hover {
-		color: rgba($color: $mainTextColor, $alpha: 0.5);
-	}
-	&:hover .technologies__svg-link path{
-		fill: $accentColor;
-		transition: all 0.3s ease;
-		text-decoration: underline;
-	}
-	&:focus {
-		outline: none;
-		text-decoration: underline;
-	}
-	&:focus + .technologies__svg-link path{
-		fill: $accentColor;
-		transition: all 0.3s ease;
-	}
-	&:active {
-		color: $accentColor;
-	}
+	
 	@media (max-width: 990px) {
+		margin-bottom: 50px;
 		&__svg-link {
 			width:60px;
 			height: 60px;
@@ -40,6 +42,7 @@
 		}
 	}
 	@media (min-width: 990px) {
+		margin-bottom: 160px;
 		&__svg-link {
 			width: 100px;
 			height: 100px;

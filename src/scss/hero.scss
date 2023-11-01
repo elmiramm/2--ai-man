@@ -29,9 +29,6 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
-		&--accent {
-			color: $accentColor;
-		}
 		@media (min-width: $maxWidthContainer) {
 			font-size: 116px;
 		}

@@ -113,6 +113,9 @@ select {
 	letter-spacing: 1px;
 
 	text-transform: uppercase;
+	&--accent {
+		color: $accentColor;
+	}
 	@media (max-width: 990px) {
 		font-size: calc(15px + 65 * 100vw/1342);
 	}
