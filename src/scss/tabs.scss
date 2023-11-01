@@ -18,8 +18,10 @@
 		padding-bottom: 24px;
 
 		flex: 1 1 auto;
+
 		color: rgba($color: $mainTextColor, $alpha: 0.5);
 		transition: all 0.3s ease;
+		
 		&--active {
 			color: rgba($color: $mainTextColor, $alpha: 1);
 			position: relative;
@@ -34,12 +36,20 @@
 				background: $accentGradient;
 			}
 		}
+		&:hover {
+			color: $accentColor;
+		}
 	}
 	&__item {
 		display: none;
 		&--active {
 			display: flex;
 		}
+		transform: scaleY(0.8);
+		opacity: 0;
+		transform-origin: center top;
+		-webkit-animation: showContent 0.6s forwards;
+		animation: showContent 0.6s forwards;
 	}
 	&__title {
 		font-family: "Raleway";
@@ -80,6 +90,7 @@
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
+		
 	}
 	&__image {
 		width: 50%;
