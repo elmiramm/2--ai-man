@@ -1,0 +1,48 @@
+.technologies {
+	&__link {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin-bottom: 67px;
+	}
+
+	&:hover {
+		color: rgba($color: $mainTextColor, $alpha: 0.5);
+	}
+	&:hover .technologies__svg-link path{
+		fill: $accentColor;
+		transition: all 0.3s ease;
+		text-decoration: underline;
+	}
+	&:focus {
+		outline: none;
+		text-decoration: underline;
+	}
+	&:focus + .technologies__svg-link path{
+		fill: $accentColor;
+		transition: all 0.3s ease;
+	}
+	&:active {
+		color: $accentColor;
+	}
+	@media (max-width: 990px) {
+		&__svg-link {
+			width:60px;
+			height: 60px;
+		}
+	}
+	@media (max-width: $burgerBP) {
+		&__svg-link {
+			width:40px;
+			height: 40px;
+		}
+	}
+	@media (min-width: 990px) {
+		&__svg-link {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
