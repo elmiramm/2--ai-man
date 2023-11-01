@@ -1,8 +1,9 @@
 .tabs {
 	&__head {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 
 		min-height: 112px;
 		margin-bottom: 80px;
@@ -10,12 +11,12 @@
 		overflow: hidden;
 	}
 	&__caption {
+		max-width: 300px;
 		font-size: 32px;
 		font-weight: 600;
 		text-transform: uppercase;
 		text-align: center;
-		padding-top: 24px;
-		padding-bottom: 24px;
+		padding: 24px;
 
 		flex: 1 1 auto;
 
@@ -111,6 +112,32 @@
 			background-size: contain;
 
 			margin-left: 24px;
+		}
+	}
+	@media (max-width: 990px) {
+		&__caption {
+			font-size: 26px;
+		}
+		&__item {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
+		&__head {
+			margin-bottom: 15px;
+		}
+	}
+	@media (max-width: $bp480) {
+
+		&__caption {
+			padding: 15px;
+			font-size: 16px;
+		}
+		&__list-item {
+			font-size: 18px;
 		}
 	}
 }
