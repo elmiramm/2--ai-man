@@ -1,47 +1,4 @@
 .development {
-	&__inner {
-		position: relative;
-		&::before,
-		&::after {
-			content: "";
-			display: block;
-			width: 1px;
-			height: 85%;
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			background-color: rgba($color: $mainTextColor, $alpha: 0.1);
-		}
-		&::before {
-			left: 45%;
-		}
-		&::after {
-			right: 45%;
-		}
-	}
-	&__row {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		&:not(:last-child) {
-			margin-bottom: 64px;
-		}
-		&:nth-child(2n) {
-			.development__arrow {
-				transform: rotate(180deg);
-			}
-		}
-	}
-	&__item {
-		display: flex;
-		align-items: center;
-		max-width: 508px;
-	}
-
-	&__info {
-		margin-left: 32px;
-	}
 	&__item-title {
 		font-size: 24px;
 	}
@@ -49,11 +6,105 @@
 		color: rgba($color: $mainTextColor, $alpha: 0.5);
 		letter-spacing: -0.6px;
 	}
+	@media (max-width: 1249.999px) {
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&__row {
+			max-width: 33%;
+			&:nth-child(2n) {
+				.development__arrow {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__info {
+			text-align: center;
+		}
+		&__arrow {
+			transform: rotate(90deg);
+		}
+	}
+	@media (min-width: 1250px) {
+		&__inner {
+			position: relative;
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				width: 1px;
+				height: 85%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba($color: $mainTextColor, $alpha: 0.1);
+			}
+			&::before {
+				left: 45%;
+			}
+			&::after {
+				right: 45%;
+			}
+		}
+		&__row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+	
+			&:not(:last-child) {
+				margin-bottom: 64px;
+			}
+			&:nth-child(2n) {
+				.development__arrow {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&__item {
+			display: flex;
+			align-items: center;
+			max-width: 508px;
+		}
+	
+		&__info {
+			margin-left: 32px;
+		}
+	}
 
 	@media (max-width: 990px) {
 		margin-bottom: 80px;
 		&__title {
 			margin-bottom: 50px;
+		}
+		&__inner {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__row {
+			max-width: 100%;
+			width: 100%;
+			position: relative; 
+			&:not(:last-child) {
+				margin-bottom: 41px;
+			}
+			&::before {
+				content: "";
+				display: block;
+				width: 80%;
+				height: 2px;
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: rgba($color: $mainTextColor, $alpha: 0.1);
+			}
 		}
 	}
 	@media (min-width: 990px) {
