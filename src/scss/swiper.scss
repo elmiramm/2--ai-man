@@ -1,40 +1,5 @@
 @import "../../node_modules/swiper/swiper-vars";
 @import "../../node_modules/swiper/swiper";
-
-.swiper {
-	margin-right: 0;
-	margin-left: 0;
-}
-
-.swiper-pagination-bullets {
-	display: flex;
-	gap: 7px;
-	align-items: center;
-	justify-content: center;
-}
-.slider-awards {
-	.swiper-pagination-bullets {
-		justify-content: left;
-	}
-}
-.swiper-pagination-bullet {
-	cursor: pointer;
-	flex: 0 0 53px;
-	height: 4px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	&::after {
-		content: "";
-		width: 53px;
-		height: 4px;
-		background-color: #BEA495;
-		transition: background-color 0.3 ease;
-	}
-}
-
-.swiper-pagination-bullet-active {
-	&::after {
-		background-color: #7B6152;
-	}
-}
+@import "../../node_modules/swiper/modules/autoplay";
+@import "../../node_modules/swiper/modules/navigation";
+@import "../../node_modules/swiper/modules/pagination";
