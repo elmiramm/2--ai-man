@@ -18,7 +18,7 @@
 	}	
 	@media (max-width: 990px) {
 		margin-bottom: 80px;
-		&__title-blick {
+		&__title-block {
 			margin-bottom: 50px;
 		}
 	}	
@@ -29,9 +29,30 @@
 		}
 	}
 	@media (max-width: 768px) {
+		&__title-block {
+			flex-wrap: wrap;
+			margin-bottom: 10px;
+		}
+		&__title {
+			font-size: calc(10px + 4.8435171386vw);
+			margin-bottom: 50px;
+		}
+		.slider-things__controls {
+			margin-left: auto;
+		}
 		img {
 			max-height: 300px;
-			object-fit: contain;
+			object-fit: cover;
+			width: 100%;
 		}
-	}	
-}
+		svg {
+			width: 42px;
+			height: 42px;
+		}
+		&__item-title {
+			font-size: 15px;
+		}
+		}
+
+
+}	

@@ -687,7 +687,7 @@ select {
 .title--accent {
   color: #A7F306;
 }
-@media (max-width: 990px) {
+@media (max-width: 1100px) {
   .title {
     font-size: calc(15px + 4.8435171386vw);
   }
@@ -697,7 +697,7 @@ select {
     font-size: 24px;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1100px) {
   .title {
     font-size: 80px;
   }
@@ -1507,7 +1507,7 @@ select {
   .things {
     margin-bottom: 80px;
   }
-  .things__title-blick {
+  .things__title-block {
     margin-bottom: 50px;
   }
 }
@@ -1520,8 +1520,27 @@ select {
   }
 }
 @media (max-width: 768px) {
+  .things__title-block {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .things__title {
+    font-size: calc(10px + 4.8435171386vw);
+    margin-bottom: 50px;
+  }
+  .things .slider-things__controls {
+    margin-left: auto;
+  }
   .things img {
     max-height: 300px;
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+  }
+  .things svg {
+    width: 42px;
+    height: 42px;
+  }
+  .things__item-title {
+    font-size: 15px;
   }
 }
