@@ -1,0 +1,37 @@
+.things {
+	&__title-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__item-title {
+		font-family: Raleway;
+		font-size: 28px;
+		line-height: 1.6;
+		font-weight: 600;
+	}
+	@media (max-width: 1100px) {
+		svg {
+			width: 62px;
+			height: 62px;
+		}
+	}	
+	@media (max-width: 990px) {
+		margin-bottom: 80px;
+		&__title-blick {
+			margin-bottom: 50px;
+		}
+	}	
+	@media (min-width: 990px) {
+		margin-bottom: 160px;
+		&__title-block {
+			margin-bottom: 94px;
+		}
+	}
+	@media (max-width: 768px) {
+		img {
+			max-height: 300px;
+			object-fit: contain;
+		}
+	}	
+}
