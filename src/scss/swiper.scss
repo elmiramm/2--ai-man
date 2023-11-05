@@ -9,3 +9,16 @@
 		transform: rotate(180deg);
 	}
 }
+.slider-reviews {
+	position: relative;
+	&__controls {
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+		width: 100%;
+	}
+	.slider-arrows {
+		display: flex;
+		justify-content: space-between;
+	}
+}
