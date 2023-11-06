@@ -21,4 +21,9 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	@media (max-width:520px) {
+		&__controls {
+			bottom: 30px;
+		}
+	}
 }
